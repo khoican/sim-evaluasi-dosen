@@ -9,7 +9,7 @@ const MainLayout = () => {
 			</div>
 
 			<div className="relative left-[20%] w-[80%]">
-				<div className="ps-4">
+				<div className="px-6">
 					<Outlet />
 				</div>
 			</div>
