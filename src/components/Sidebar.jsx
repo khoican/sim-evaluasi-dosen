@@ -11,10 +11,10 @@ import { faGaugeHigh } from '@fortawesome/free-solid-svg-icons/faGaugeHigh';
 
 const Sidebar = () => {
 	return (
-		<div className="h-[calc(100vh-16px)] bg-white rounded-md drop-shadow-right-bottom flex flex-col justify-between overflow-hidden">
-			<div className="py-4 px-3">
+		<nav className="h-[calc(100vh-16px)] bg-white rounded-md drop-shadow-right-bottom flex flex-col justify-between overflow-hidden">
+			<section className="py-4 px-3">
 				<Logo />
-				<div className="mt-20 flex flex-col gap-2 w-full">
+				<main className="mt-20 flex flex-col gap-2 w-full">
 					<NavLink
 						to="/"
 						title="Dashboard"
@@ -23,22 +23,22 @@ const Sidebar = () => {
 					/>
 					<NavLink to="/" title="Laporan" icon={faFileContract} />
 					<NavLink to="/" title="Profil" icon={faUser} />
-				</div>
-			</div>
+				</main>
+			</section>
 
-			<div className="border-t border-primary-gray p-3 bg-light-gray flex items-center justify-between">
-				<div className="w-4/5 flex items-center gap-2">
-					<div className="bg-dark-blue min-h-10 min-w-10 rounded-full flex items-center justify-center">
+			<footer className="border-t border-primary-gray p-3 bg-light-gray flex items-center justify-between">
+				<aside className="w-4/5 flex items-center gap-2">
+					<section className="bg-dark-blue min-h-10 min-w-10 rounded-full flex items-center justify-center">
 						<FontAwesomeIcon
 							icon={faUserAlt}
 							className="text-white h-4 w-4"
 						/>
-					</div>
+					</section>
 
 					<p className="text-black text-sm font-semibold truncate w-auto">
 						Muhammad Nur Sholeh Saifulloh
 					</p>
-				</div>
+				</aside>
 
 				<button className="cursor-pointer w-1/5 flex items-center justify-end">
 					<FontAwesomeIcon
@@ -46,8 +46,8 @@ const Sidebar = () => {
 						className="text-dark-red rotate-180 text-lg"
 					/>
 				</button>
-			</div>
-		</div>
+			</footer>
+		</nav>
 	);
 };
 
