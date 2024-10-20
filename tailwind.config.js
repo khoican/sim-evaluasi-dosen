@@ -41,6 +41,12 @@ export default {
         'primary-red': '#FF0000',
         'dark-red': '#A90000',
         'verydark-red': '#510000',
+      },
+
+      dropShadow: {
+        'right-bottom': '4px 4px 0.1rem rgba(0, 0, 0, 0.25)',
+        'bottom': '0 4px 0.1rem rgba(0, 0, 0, 0.25)',
+        'right': '-4px 0 0.1rem rgba(0, 0, 0, 0.25)',
       }
     },
   },
