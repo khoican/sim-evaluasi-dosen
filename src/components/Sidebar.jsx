@@ -14,15 +14,19 @@ const Sidebar = () => {
 		<nav className="h-[calc(100vh-16px)] bg-white rounded-md drop-shadow-right-bottom flex flex-col justify-between overflow-hidden">
 			<section className="py-4 px-3">
 				<Logo />
-				<main className="mt-20 flex flex-col gap-2 w-full">
+				<main className="mt-20 flex flex-col gap-1 w-full">
 					<NavLink
 						to="/"
 						title="Dashboard"
 						icon={faGaugeHigh}
 						isActive={true}
 					/>
-					<NavLink to="/" title="Laporan" icon={faFileContract} />
-					<NavLink to="/" title="Profil" icon={faUser} />
+					<NavLink
+						to="/laporan?type=bkd"
+						title="Laporan"
+						icon={faFileContract}
+					/>
+					<NavLink to="/profil" title="Profil" icon={faUser} />
 				</main>
 			</section>
 

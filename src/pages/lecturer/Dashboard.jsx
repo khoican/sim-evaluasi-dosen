@@ -3,18 +3,18 @@ import {
 	faCalendar,
 	faSquarePollVertical,
 } from '@fortawesome/free-solid-svg-icons';
-import Header from '../components/Header';
-import InformationBar from '../components/InformationBar';
-import ChartLecturer from '../components/charts/ChartLecturer';
+import Header from '../../components/Header';
+import InformationBar from '../../components/InformationBar';
+import ChartLecturer from '../../components/charts/ChartLecturer';
+
+const navigation = [
+	{
+		name: 'dashboard',
+		to: '/',
+	},
+];
 
 const Dashboard = () => {
-	const navigation = [
-		{
-			name: 'dashboard',
-			to: '/',
-		},
-	];
-
 	return (
 		<main>
 			<Header title="Dashboard" navigation={navigation} />
