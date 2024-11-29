@@ -18,29 +18,29 @@ const SidebarAdmin = () => {
 				<Logo />
 				<main className="mt-14 flex flex-col gap-1 w-full">
 					<NavLink
-						to="/"
+						to="/admin"
 						title="Dashboard"
 						icon={faGaugeHigh}
 						isActive={true}
 					/>
 					<NavLink
-						to="/review?type=skp"
+						to="/admin/reviewSkp"
 						title="Review SKP"
 						icon={faFileContract}
 					/>
 					<NavLink
-						to="/review?type=bkd"
+						to="/admin/reviewBkd"
 						title="Review BKD"
 						icon={faFileContract}
 					/>
 					<NavLink
-						to="/lecturers"
+						to="/admin/lecturers"
 						title="Data Dosen"
 						icon={faUsers}
 					/>
 					<NavLink to="/period" title="Periode" icon={faCalendar} />
 					<NavLink
-						to="/activity"
+						to="/admin/activity"
 						title="Log Aktifitas"
 						icon={faClockRotateLeft}
 					/>
