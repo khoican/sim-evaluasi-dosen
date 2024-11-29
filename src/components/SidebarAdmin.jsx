@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from '../elements/Logo';
 import {
+	faCalendar,
 	faClockRotateLeft,
-	faDatabase,
 	faFileContract,
 	faRightFromBracket,
 	faUserAlt,
@@ -10,7 +10,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import NavLink from '../elements/NavLink';
 import { faGaugeHigh } from '@fortawesome/free-solid-svg-icons/faGaugeHigh';
-import Button from '../elements/Button';
 
 const SidebarAdmin = () => {
 	return (
@@ -25,18 +24,23 @@ const SidebarAdmin = () => {
 						isActive={true}
 					/>
 					<NavLink
-						to="/laporan?type=bkd"
+						to="/review?type=skp"
 						title="Review SKP"
 						icon={faFileContract}
 					/>
 					<NavLink
-						to="/laporan?type=bkd"
+						to="/review?type=bkd"
 						title="Review BKD"
 						icon={faFileContract}
 					/>
-					<Button title="Master Data" icon={faDatabase} />
 					<NavLink
-						to="/profil"
+						to="/lecturers"
+						title="Data Dosen"
+						icon={faUsers}
+					/>
+					<NavLink to="/period" title="Periode" icon={faCalendar} />
+					<NavLink
+						to="/activity"
 						title="Log Aktifitas"
 						icon={faClockRotateLeft}
 					/>
