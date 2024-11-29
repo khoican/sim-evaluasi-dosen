@@ -5,6 +5,8 @@ import Laporan from '../pages/lecturer/Laporan';
 import User from '../pages/lecturer/users/User';
 import EditUser from '../pages/lecturer/users/EditUser';
 import ChangePassword from '../pages/lecturer/users/ChangePassword';
+import AdminLayout from '../layouts/AdminLayout';
+import DashboardAdmin from '../pages/admin/DashboardAdmin';
 
 export const router = createBrowserRouter([
 	{
@@ -30,6 +32,16 @@ export const router = createBrowserRouter([
 			{
 				path: 'profil/change-password',
 				element: <ChangePassword />,
+			},
+		],
+	},
+	{
+		path: 'admin',
+		element: <AdminLayout />,
+		children: [
+			{
+				index: true,
+				element: <DashboardAdmin />,
 			},
 		],
 	},
