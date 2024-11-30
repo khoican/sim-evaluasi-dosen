@@ -7,6 +7,8 @@ import EditUser from '../pages/lecturer/users/EditUser';
 import ChangePassword from '../pages/lecturer/users/ChangePassword';
 import AdminLayout from '../layouts/AdminLayout';
 import DashboardAdmin from '../pages/admin/DashboardAdmin';
+import ReviewSKP from '../pages/admin/laporan/ReviewSKP';
+import ReviewBKD from '../pages/admin/laporan/ReviewBKD';
 
 export const router = createBrowserRouter([
 	{
@@ -42,6 +44,14 @@ export const router = createBrowserRouter([
 			{
 				index: true,
 				element: <DashboardAdmin />,
+			},
+			{
+				path: 'reviewSkp',
+				element: <ReviewSKP />,
+			},
+			{
+				path: 'reviewBkd',
+				element: <ReviewBKD />,
 			},
 		],
 	},

@@ -5,7 +5,7 @@ import {
 } from '../redux/actions/detailLaporan';
 
 const ListDocument = (props) => {
-	const { type, data } = props;
+	const { type, data, isAdmin } = props;
 	const dispatch = useDispatch();
 
 	const handleDetailBKD = () => {
@@ -35,9 +35,9 @@ const ListDocument = (props) => {
 		<section
 			className="flex items-center justify-between border-b border-primary-gray p-2 cursor-pointer hover:bg-light-gray"
 			onClick={
-				type === 'BKD'
+				type === 'BKD' && !isAdmin
 					? handleDetailBKD
-					: type === 'SKP' && handleDetailSKP
+					: type === 'SKP' && !isAdmin && handleDetailSKP
 			}
 		>
 			<aside className="flex items-center gap-3">
@@ -47,13 +47,23 @@ const ListDocument = (props) => {
 				<h3 className="font-medium text-sm">{data.name}</h3>
 			</aside>
 
-			<aside
-				className={`p-2 rounded text-xs font-medium ${
-					initialStatus[data.status].style
-				}`}
-			>
-				<p>{initialStatus[data.status].title}</p>
-			</aside>
+			<section className="flex items-center gap-2">
+				<aside
+					className={`p-2 rounded text-xs font-medium ${
+						initialStatus[data.status].style
+					}`}
+				>
+					<p>{initialStatus[data.status].title}</p>
+				</aside>
+
+				{isAdmin && (
+					<aside
+						className={`p-2 rounded text-xs font-medium border border-primary-blue text-primary-blue`}
+					>
+						<p>Hari Ini</p>
+					</aside>
+				)}
+			</section>
 		</section>
 	);
 };
